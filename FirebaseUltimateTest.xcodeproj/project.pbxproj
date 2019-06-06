@@ -29,6 +29,9 @@
 		F4C0575D22826A5200FFD8BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4C0575C22826A5200FFD8BE /* GoogleService-Info.plist */; };
 		F4C0575E22826A5200FFD8BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4C0575C22826A5200FFD8BE /* GoogleService-Info.plist */; };
 		F4C0575F22826A5200FFD8BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4C0575C22826A5200FFD8BE /* GoogleService-Info.plist */; };
+		F4CCBBB322A8B68E00D058EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCBBB222A8B68E00D058EA /* LoginViewController.swift */; };
+		F4CCBBB422A8B68E00D058EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCBBB222A8B68E00D058EA /* LoginViewController.swift */; };
+		F4CCBBB522A8B68E00D058EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCBBB222A8B68E00D058EA /* LoginViewController.swift */; };
 		F4D30D0E22826E1F0021FBE1 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D30D0D22826E1F0021FBE1 /* FirstTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,7 @@
 		F47F9A622294D30B0032AD0E /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewController.swift; sourceTree = "<group>"; };
 		F47F9A662294D6580032AD0E /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		F4C0575C22826A5200FFD8BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F4CCBBB222A8B68E00D058EA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F4D30D0D22826E1F0021FBE1 /* FirstTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
 		F99527696248C2BA3E3A472B /* Pods-FirebaseUltimateTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseUltimateTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseUltimateTestUITests/Pods-FirebaseUltimateTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +164,7 @@
 				F47DD066228266C8006478C3 /* ViewController.swift */,
 				F47F9A5E2294B7960032AD0E /* TeamsTableViewController.swift */,
 				F47DD068228266C8006478C3 /* Main.storyboard */,
+				F4CCBBB222A8B68E00D058EA /* LoginViewController.swift */,
 				F47F9A662294D6580032AD0E /* TasksTableViewController.swift */,
 				F47F9A622294D30B0032AD0E /* StudentsTableViewController.swift */,
 				F4D30D0D22826E1F0021FBE1 /* FirstTableViewController.swift */,
@@ -202,6 +207,7 @@
 				F47DD05E228266C8006478C3 /* Frameworks */,
 				F47DD05F228266C8006478C3 /* Resources */,
 				A49C531E287393E3F4F962F7 /* [CP] Embed Pods Frameworks */,
+				4FC4FA37CD8E879FB7B81F88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,6 +375,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4FC4FA37CD8E879FB7B81F88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseUltimateTest/Pods-FirebaseUltimateTest-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseUltimateTest/Pods-FirebaseUltimateTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A49C531E287393E3F4F962F7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +407,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseUltimateTest/Pods-FirebaseUltimateTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -391,6 +420,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -432,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CCBBB322A8B68E00D058EA /* LoginViewController.swift in Sources */,
 				F47F9A672294D6580032AD0E /* TasksTableViewController.swift in Sources */,
 				F47DD067228266C8006478C3 /* ViewController.swift in Sources */,
 				F47DD065228266C8006478C3 /* AppDelegate.swift in Sources */,
@@ -448,6 +479,7 @@
 				F47F9A642294D30B0032AD0E /* StudentsTableViewController.swift in Sources */,
 				F47F9A602294B7960032AD0E /* TeamsTableViewController.swift in Sources */,
 				F47F9A682294D6580032AD0E /* TasksTableViewController.swift in Sources */,
+				F4CCBBB422A8B68E00D058EA /* LoginViewController.swift in Sources */,
 				F47DD07A228266CA006478C3 /* FirebaseUltimateTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +491,7 @@
 				F47F9A652294D30B0032AD0E /* StudentsTableViewController.swift in Sources */,
 				F47F9A612294B7960032AD0E /* TeamsTableViewController.swift in Sources */,
 				F47F9A692294D6580032AD0E /* TasksTableViewController.swift in Sources */,
+				F4CCBBB522A8B68E00D058EA /* LoginViewController.swift in Sources */,
 				F47DD085228266CA006478C3 /* FirebaseUltimateTestUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

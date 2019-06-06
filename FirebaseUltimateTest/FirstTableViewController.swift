@@ -8,11 +8,13 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class FirstTableViewController: UITableViewController {
     var groups = [Any]()
     var ids = [String]()
-
+    @IBOutlet var signOutButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,6 +56,15 @@ class FirstTableViewController: UITableViewController {
         if segue.destination is TeamsTableViewController {
             let vc = segue.destination as! TeamsTableViewController
             vc.materiaID = ids[(tableView.indexPathForSelectedRow?.row)!]
+        }
+    }
+    
+    @IBAction func signOut(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            self.performSegue(withIdentifier: "logoutSegue", sender: nil)
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
         }
     }
 }

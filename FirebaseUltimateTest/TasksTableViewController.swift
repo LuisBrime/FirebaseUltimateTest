@@ -58,7 +58,7 @@ class TasksTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tasks", for: indexPath)
         
         let t = ts[indexPath.row] as! [String:Any]
-        lett s = t["name"] as! String
+        let s = t["name"] as! String
         
         cell.textLabel?.text = s
         

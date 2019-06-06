@@ -17,7 +17,6 @@ import Firebase
     func applicationDidFinishLaunching(_ application: UIApplication) {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        print("base configurada")
     }
     
 //    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

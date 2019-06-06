@@ -7,6 +7,8 @@ target 'FirebaseUltimateTest' do
 
   # Pods for FirebaseUltimateTest
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'FirebaseUI/Auth'
   pod 'Firebase/Firestore'
 
   target 'FirebaseUltimateTestTests' do
